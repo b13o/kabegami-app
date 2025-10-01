@@ -1,6 +1,11 @@
 import "./App.css";
 import background from "./assets/background.png";
-import { GlassCard } from "./components/glass-card";
+import { Timer } from "./components/timer";
+import { Browser } from "./components/browser";
+import { ToDoList } from "./components/todo-list";
+import { Memo } from "./components/memo";
+import { Comment } from "./components/comment";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
@@ -11,36 +16,20 @@ function App() {
       >
         <div className="grid grid-cols-10 gap-4 h-10/12 pb-12">
           <div className="col-span-4 pl-24 flex items-end justify-end">
-            <GlassCard className="px-24 py-16">
-              <h1 className="text-7xl font-bold underline">25:00</h1>
-            </GlassCard>
+            <Timer />
           </div>
           <div className="col-span-4">
-            <GlassCard className="aspect-video h-72">
-              <h1 className="text-3xl font-bold underline">ブラウザ</h1>
-            </GlassCard>{" "}
-            <div className="flex gap-12 pt-20 justify-center">
-              <div className="aspect-square h-48 bg-sky-200 -rotate-6">
-                <p>ToDo List</p>
-              </div>
-              <div className="aspect-square h-48 bg-amber-200">
-                <p>メモ欄</p>
-              </div>
+            <Browser />
+            <div className="flex gap-12 pt-12 justify-center">
+              <ToDoList />
+              <Memo />
             </div>
           </div>
           <div className="col-span-2">
-            <GlassCard>
-              <h1 className="text-3xl font-bold underline h-96">コメント欄</h1>
-            </GlassCard>{" "}
+            <Comment />
           </div>
         </div>
-        <footer className="flex justify-end">
-          <GlassCard className="px-36">
-            <h1 className="text-6xl font-bold underline">
-              ロゴ、バナー、、など
-            </h1>
-          </GlassCard>
-        </footer>
+        <Footer />
       </div>
     </>
   );
