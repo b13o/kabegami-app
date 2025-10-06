@@ -1,6 +1,6 @@
 import "./App.css";
 import background from "./assets/background.png";
-import { Timer } from "./components/timer";
+import Timer from "./components/timer";
 import { Browser } from "./components/browser";
 import { ToDoList } from "./components/todo-list";
 import { Memo } from "./components/memo";
